@@ -1,0 +1,213 @@
+
+.button-share{
+        padding: 10px 20px;
+        background-color: #009fdf;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.logo img {
+    height: 40px;
+    /* Ajuste a altura conforme necessário */
+    
+}
+
+.search-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    position: relative; /* Adicione esta linha */
+}
+
+.search-input {
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    width: 200px;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.location-options {
+    display: flex;
+    align-items: center;
+}
+
+.city {
+    margin: 0 10px;
+}
+
+.arrow-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu {
+    border-top: 1px solid #bab9b9;
+    background-color: #008cc3;
+    color:#fff;
+    height: 10px;
+    padding: 10px;
+
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    display: inline-block;
+
+    text-decoration: none;
+    color:#fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #007bff;
+    color: #333;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+/* Estilo específico para a caixa de pesquisa, para sobrepor a sobreposição */
+.search-input {
+    position: relative;
+    z-index: 10000; /* Garante que o campo de pesquisa esteja acima da sobreposição */
+}
+
+/* Estilo para o contêiner de resultados de pesquisa */
+/* Estilo para o contêiner de resultados de pesquisa */
+.search-results {
+    position: absolute;
+    top: 100%; /* Posiciona os resultados abaixo do campo de pesquisa */
+    left: 0;
+    right: 0;
+    background-color: #fff; /* Cor de fundo branca */
+    border: 1px solid #ddd; /* Borda */
+    border-radius: 0 0 5px 5px; /* Bordas arredondadas apenas na parte inferior */
+    z-index: 10001; /* Garante que os resultados de pesquisa sejam exibidos acima da sobreposição */
+    max-height: 200px; /* Altura máxima para rolagem */
+    overflow-y: auto; /* Adiciona rolagem vertical se houver muitos resultados */
+    display: none; /* Por padrão, oculta a lista de resultados */
+    width: 300px; /* Largura dos resultados */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilo para cada resultado de pesquisa */
+.search-result {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #eee; /* Adiciona uma linha separadora entre os resultados */
+}
+
+.search-result:hover {
+    background-color: #f5f5f5; /* Cor de fundo ao passar o mouse */
+}
+
+.search-result:last-child {
+    border-bottom: none; /* Remove a linha separadora do último resultado */
+}
+
+.search-result img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.search-result span {
+    font-size: 14px;
+}
+
+
+
+
+footer{
+
+    height: 30px;
+    width: 100%;
+    margin-top: 50px;
+    background-color:#008cc3;
+}
+
+
+
+
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+    background: linear-gradient(to right, #ebe9e9, #f5f5f5);
+}
+
+.top-bar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    background: #f0f0f0;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu a:hover {
+    background-color: #0066cc;
+    color: #fff;
+}
+
+.search-results {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: linear-gradient(145deg, #007bff, #0056b3);
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão de Tempo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" 
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" 
+    crossorigin=""/>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/divs.css">
+    <link rel="stylesheet" href="css/map.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="top-bar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <div class="search-bar">
+                <!-- Dentro de div.search-bar -->
+                <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar cidade..." oninput="searchCities(this.value)">
+                <div id="searchResults" class="search-results"></div>
+            </div>
+            <button id="currentLocationBtn" class="button-location">Localização Atual</button>
+        </div>
+        <nav class="menu">
+            <button onclick="partilhar()" class="button-share">Compartilhar Previsão</button>
+        </nav>
+
+
+        <div class="content">
+            <!-- Conteúdo da página aqui -->
+            <h1>Bem-vindo à nossa página de Previsão de Tempo</h1>
+            <p>SEJA FELIZ!</p>
+        </div>
+    </div>
+
+
+
+    <div class="div1">
+        <h1 class="h1" id="weatherForecast">Previsão de tempo</h1>
+        <span class="city-name"></span> <!-- Novo elemento para exibir o nome da cidade -->
+        <p class="hora">12:17 | Sábado</p>
+        <div class="int">
+            <p>Núvens Dispersas</p>
+            <img class="img1" src="https://www.tempo.com/css/v3/svgs/comun/symbols/white/3n.svg" alt="Núvens dispersas">
+            <span class="span1"> 25°</span>
+            <div class="ds1">
+                <span> Sensação de 27°</span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- HTML (sem alterações) -->
+<div class="slideshow-container">
+    <div class="card-slides">
+        <div class="card">
+            <div class="Cardint">
+                <p class="para">Hoje</p>
+                <p class="date today-date"></p>
+                <p class="temperature today-temp"></p>
+                <img class="weather-icon today-icon" src="" alt="Ícone do tempo">
+                <p class="wind-speed today-wind"></p>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="Cardint">
+                <p class="para">Amanhã</p>
+                <p class="date tomorrow-date"></p>
+                <p class="temperature tomorrow-temp"></p>
+                <img class="weather-icon tomorrow-icon" src="" alt="Ícone do tempo">
+                <p class="wind-speed tomorrow-wind"></p>
+            </div>
+        </div>
+
+        <!-- Cards dinâmicos -->
+        <div class="card day-card">
+            <div class="Cardint">
+                <p class="para day-name"></p>
+                <p class="date day-date"></p>
+                <p class="temperature day-temp"></p>
+                <img class="weather-icon day-icon" src="" alt="Ícone do tempo">
+                <p class="wind-speed day-wind"></p>
+            </div>
+        </div>
+
+        <!-- Duplicar os cards dinâmicos -->
+        <div class="card day-card">
+            <div class="Cardint">
+                <p class="para day-name"></p>
+                <p class="date day-date"></p>
+                <p class="temperature day-temp"></p>
+                <img class="weather-icon day-icon" src="" alt="Ícone do tempo">
+                <p class="wind-speed day-wind"></p>
+            </div>
+        </div>
+
+        <div class="card day-card">
+            <div class="Cardint">
+                <p class="para day-name"></p>
+                <p class="date day-date"></p>
+                <p class="temperature day-temp"></p>
+                <img class="weather-icon day-icon" src="" alt="Ícone do tempo">
+                <p class="wind-speed day-wind"></p>
+            </div>
+        </div>
+
+        <div class="card day-card">
+            <div class="Cardint">
+                <p class="para day-name"></p>
+                <p class="date day-date"></p>
+                <p class="temperature day-temp"></p>
+                <img class="weather-icon day-icon" src="" alt="Ícone do tempo">
+                <p class="wind-speed day-wind"></p>
+            </div>
+        </div>
+
+        <div class="card day-card">
+            <div class="Cardint">
+                <p class="para day-name"></p>
+                <p class="date day-date"></p>
+                <p class="temperature day-temp"></p>
+                <img class="weather-icon day-icon" src="" alt="Ícone do tempo">
+                <p class="wind-speed day-wind"></p>
+            </div>
+        </div>
+    </div>
+    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    
+
+
+
+
+
+<footer>
+
+
+</footer>
+</body>
+<script src="js/api.js"></script>
+<script src="js/script.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NO4J+8gMkfP7aZJXi9fEM/E2Ujzj4gBCsZ57FVqR1JdJqrogWA=="
+    crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.31/moment-timezone-with-data.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/map.js"></script>
+
+
+
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NO4J+8gMkfP7aZJXi9fEM/E2Ujzj4gBCsZ57FVqR1JdJqrogWA=="
+    crossorigin=""></script>
+</html>

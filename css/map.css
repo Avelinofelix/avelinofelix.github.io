@@ -1,0 +1,19 @@
+#map {
+    height: 400px;
+    /* Altura do mapa */
+    width: 80%;
+    /* Largura do mapa */
+    margin-right: 20px;
+    /* Espaçamento à direita */
+    margin-bottom: 600px;
+    float: right;
+    /* Alinha à direita */
+}
+
+#mapContainer {
+    height: 400px;
+    /* Altura do mapa */
+    width: 50%;
+    /* Largura do mapa */
+   transform: translateX(110%);
+}
